@@ -17,6 +17,7 @@ namespace Task1
             {
                 Console.Write(item);
             }
+
         }
     }
 }
