@@ -4,7 +4,6 @@ namespace Task1
 {
     internal class Program
     {
-        //добавить в алфавит заглавные буквы, проверку ошибок.
         private static void Main(string[] args)
         {
             DataPharser dp = new DataPharser();
@@ -12,11 +11,11 @@ namespace Task1
             char[] message = dp.getMessage("Message.txt");
             var alphabet = dp.GetAlphabet();
             int[] messageToInt = dp.CharToCode(message, alphabet);
-            int[] messageToBtype = et.Coding(messageToInt, 1, 7, alphabet.Count);
-            int[] messageToAtype = et.Decoding(messageToBtype, 1, 7, alphabet.Count);
+            int[] messageToBtype = et.Coding(messageToInt, 1, 1, alphabet.Count + 1);
+            int[] messageToAtype = et.Decoding(messageToBtype, 1, 1, alphabet.Count + 1);
             foreach (var item in dp.CodeToMessage(messageToAtype, alphabet))
             {
-                Console.WriteLine(item);
+                Console.Write(item);
             }
         }
     }

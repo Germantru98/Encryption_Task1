@@ -50,7 +50,10 @@ namespace Task1
             string result = "";
             for (int i = 0; i < code.Length; i++)
             {
-                result += alphabet[code[i]];
+                if (alphabet.ContainsKey(code[i]))
+                {
+                    result += alphabet[code[i]];
+                }
             }
             return result;
         }
