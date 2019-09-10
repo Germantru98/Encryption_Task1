@@ -6,7 +6,12 @@ namespace Task1
     {
         private int To_A(int B, int n, int k, int m)
         {
-            return (B - k) * (1 / n) % m;
+            int tmp = B - k;
+            while (tmp % n != 0)
+            {
+                tmp += m;
+            }
+            return tmp / n;
         }
 
         private int To_B(int A, int n, int k, int m)

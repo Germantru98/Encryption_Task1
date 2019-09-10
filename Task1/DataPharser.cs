@@ -54,6 +54,10 @@ namespace Task1
                 {
                     result += alphabet[code[i]];
                 }
+                if (code[i] == -1)
+                {
+                    result += " ";
+                }
             }
             return result;
         }
